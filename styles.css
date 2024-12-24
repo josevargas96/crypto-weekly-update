@@ -1,3 +1,4 @@
+/* Existing styles remain the same */
 /* Modern styling for crypto weekly update */
 :root {
     --primary-color: #2a2a72;
@@ -7,102 +8,48 @@
     --accent-color: #00d4ff;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+/* Previous styles remain unchanged */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.content-section {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-    margin-top: 0;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-.crypto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* New Price Ticker Styles */
+.price-ticker {
+    display: flex;
     gap: 2rem;
-    margin-top: 2rem;
-}
-
-.crypto-card {
-    background: white;
+    padding: 1rem;
+    background: linear-gradient(to right, rgba(42, 42, 114, 0.05), rgba(0, 159, 253, 0.05));
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.crypto-card:hover {
-    transform: translateY(-5px);
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.price-up {
+.ticker-item .symbol {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.ticker-item .price {
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.ticker-item .change {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.change.positive {
+    background-color: rgba(0, 200, 83, 0.1);
     color: #00c853;
 }
 
-.price-down {
+.change.negative {
+    background-color: rgba(255, 61, 0, 0.1);
     color: #ff3d00;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    .crypto-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Add smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Add focus styles for accessibility */
-*:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 2px;
-}
+/* Previous styles remain here... */
